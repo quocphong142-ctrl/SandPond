@@ -1,9 +1,9 @@
-TodeSplat`
+TodeIsFat
 
-element SpaceShip {
+element SpaceCarrier {
 
-	colour "pink"
-	emissive "purple"
+	colour "gray"
+	emissive "blue"
 	precise true
 	pour false
 	category "player"
@@ -14,15 +14,15 @@ element SpaceShip {
 	input b () => Keyboard.ArrowDown
 	input d () => Keyboard[" "]
 	
-	output S ({space}) => SPACE.setAtom(space, ATOM.make(Sand))
+	output S ({space}) => SPACE.setAtom(space, ATOM.make(Fire))
 	
 	action {
 		@ => @ => @
 		d    _    S
 	}
 	
-	rule { @r => @_ => _@ }
-	rule { l@ => _@ => @_ }
+	rule { @r => @__ => __@ }
+	rule { l@ => __@ => @__ }
 	
 	rule top {
 		b => _ => @
